@@ -4,10 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <com.example.xyzreader.ui.ObservableScrollView
         android:id="@+id/scrollview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_behavior="com.example.xyzreader.ui.FABAwareScrollingViewBehavior">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -27,7 +32,7 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="112dp"
+                    android:layout_height="@dimen/detail_card_top_margin"
                     android:background="@drawable/photo_background_protection" />
 
             </FrameLayout>
@@ -105,5 +110,5 @@
         android:layout_marginBottom="@dimen/fab_margin"/>
 
 
-
+    </android.support.design.widget.CoordinatorLayout>
 </com.example.xyzreader.ui.DrawInsetsFrameLayout>
